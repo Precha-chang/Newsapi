@@ -30,7 +30,7 @@ class NewsPage extends StatefulWidget {
 class _NewsPageState extends State<NewsPage> {
   Future<List<Article>> fetchNews() async {
     final response = await http.get(Uri.parse(
-        'https://newsapi.org/v2/everything?q=tesla&from=2024-07-08&sortBy=publishedAt&apiKey=2d2a71834c6b4ec4837b101239daa4f0'));
+        'https://newsapi.org/v2/everything?q=tesla&from=2024-07-15&sortBy=publishedAt&apiKey=2d2a71834c6b4ec4837b101239daa4f0'));
 
     if (response.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(response.body);
